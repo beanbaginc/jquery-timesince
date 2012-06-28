@@ -1,8 +1,10 @@
-= jquery-timesince =
+jquery-timesince
+================
 
-jquery-timesince is a jQuery_ plugin that works like Django_'s timesince_
-filter. It will display a fuzzy date/time that shows how long it has been since
-a given date/time. For example, "16 minutes ago" or "3 years, 2 months ago".
+jquery-timesince is a jQuery_ plugin that works like Django_'s `timesince
+filter`_. It will display a fuzzy date/time that shows how long it has been
+since a given date/time. For example, "16 minutes ago" or "3 years, 2 months
+ago".
 
 As the page remains open, each of the timestamps will update periodically
 (defaults to every minute), so that the user always has a good idea as to
@@ -16,14 +18,15 @@ jquery-timesince is written and maintained by Christian Hammond, and is
 available under the MIT license.
 
 
-== Usage ==
+Usage
+-----
 
 To begin, you'll first need to include jQuery and jquery-timesince::
 
     <script src="jquery.min.js" type="text/javascript"></script>
     <script src="jquery.timesince.js" type="text/javascript"></script>
 
-You can then drop some elements on the page with ISO8601_-formatted
+You can then drop some elements on the page with `ISO 8601`_-formatted
 timestamps::
 
     <time class="timesince" datetime="2012-06-28T02:47:40Z">June 28, 2012</time>
@@ -51,3 +54,10 @@ If you want to get fancy, you can change the suffixes (the "ago" part), add
 some prefixes, or change the text for the "year," "month," etc. by
 setting some values in ``$.timesince.strings``. See the list of strings in
 ``jquery.timesince.js`` for more details.
+
+
+.. _jQuery: http://www.jquery.com
+.. _Django: http://www.djangoproject.com
+.. _`timesince filter`: https://docs.djangoproject.com/en/dev/ref/templates/builtins/#timesince
+.. _timeago: http://timeago.yarp.com/
+.. _`ISO 8601`: http://en.wikipedia.org/wiki/ISO_8601
