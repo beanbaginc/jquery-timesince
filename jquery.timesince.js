@@ -19,7 +19,7 @@
  * @author Christian Hammond
  * @license MIT License - http://www.opensource.org/licenses/mit-license.php
  *
- * Copyright (c) 2012, Christian Hammond (chipx86@chipx86.com)
+ * Copyright (c) 2012-2013 Beanbag, Inc.
  */
 (function($) {
     $.timesince = function(timestamp) {
