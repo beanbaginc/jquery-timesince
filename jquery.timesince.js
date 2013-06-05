@@ -184,6 +184,6 @@
         return el;
     }
 
-  // IE6 doesn't understand the <time> tag, so create it.
-  document.createElement("time");
+    // IE6 doesn't understand the <time> tag, so create it.
+    document.createElement("time");
 }(jQuery));
