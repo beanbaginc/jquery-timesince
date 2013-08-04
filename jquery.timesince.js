@@ -14,14 +14,23 @@
  * See https://github.com/chipx86/jquery-timesince for the latest.
  *
  * @name timesince
- * @version 0.1
+ * @version 0.2
  * @requires jQuery v1.2.3+
  * @author Christian Hammond
  * @license MIT License - http://www.opensource.org/licenses/mit-license.php
  *
- * Copyright (c) 2012-2013 Beanbag, Inc.
+ * Copyright (c) 2012, Christian Hammond (chipx86@chipx86.com)
+ * Copyright (c) 2013, Beanbag, Inc.
  */
-(function($) {
+(function(factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as anonymous module.
+        define(['jquery'], factory);
+    } else {
+        // Browser globals.
+        factory(jQuery);
+    }
+}(function($) {
     $.timesince = function(timestamp) {
         if (timestamp instanceof Date) {
             return timeSince(timestamp);
@@ -186,4 +195,4 @@
 
     // IE6 doesn't understand the <time> tag, so create it.
     document.createElement("time");
-}(jQuery));
+}));
