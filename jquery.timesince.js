@@ -14,7 +14,7 @@
  * See https://github.com/chipx86/jquery-timesince for the latest.
  *
  * @name timesince
- * @version 0.2
+ * @version 0.2.1
  * @requires jQuery v1.2.3+
  * @author Christian Hammond
  * @license MIT License - http://www.opensource.org/licenses/mit-license.php
@@ -137,8 +137,8 @@
         },
         datetime: function(el) {
             var iso8601 = this.isTime(el)
-                          ? el.attr("datetime")
-                          : el.attr("title");
+                          ? (el.attr('datetime') || el.prop('datetime'))
+                          : el.attr('title');
             return this.parse(iso8601);
         },
         isTime: function(el) {
